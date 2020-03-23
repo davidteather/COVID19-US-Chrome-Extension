@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<!--Header tag that includes css and js-->
+
+<head>
+    <script type="text/javascript" src="thirdparty/jquery.js"></script>
+    <script type="text/javascript" src="thirdparty/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link rel="stylesheet" type="text/css" href="thirdparty/bootstrap.css">
+</head>
+
+<body>
+
+    <!--US Header-->
+    <div class="text-center" style="font-size:40px;margin-bottom:10px;">
+        <b>US Coronavirus Stats</b>
+    </div>
+
+    <!--The total confirmed cases divison-->
+    <!--Default is 0 to prevent weird changing size stuff to the user-->
+    <div class="text-center" style="font-size:40px;margin-bottom:40px;">
+        <div class="col-md-12">
+            Confirmed Cases: <b id="positive">0</b>
+        </div>
+        <div class="col-md-12">
+            Confirmed Deaths: <b id="deaths">0</b>
+        </div>
+        <div class="col-md-12">
+            Recovered: <b id="recovered">0</b>
+        </div>
+    </div>
+
+    <!--The input for searching html-->
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="search">Search:</label>
+            <textarea class="form-control" rows="1" id="input"></textarea>
+        </div>
+    </div>
+
+    <!--Filters-->
+    <div class="row">
+        <div class="col-md-4" style="float:left;">
+            <select class="form-control"  id="highLow">
+                <option value="0">Low -> High</option>
+                <option value="1">High -> Low</option>
+                
+            </select>
+        </div>
+        <div class="col-md-4" style="float:left;" >
+            <select class="form-control"  id="category">
+                <option value="state">State</option>
+                <option value="positive">Positive</option>
+                <option value="negative">Negative</option>
+                <option value="pending">Pending</option>
+                <option value="hospitalized">Hospitalized</option>
+                <option value="death">Deaths</option>
+                <option value="total">Total</option>
+            </select>
+        </div>
+    </div>
+
+    <!--Actual data table-->
+    <div id="table"> </div>
+
+    <!--Data credit-->
+    <div class="col-sm-12">
+        <small>
+            Source: <a href="https://covidtracking.com/" target="_blank">covidtracking.com</a>
+        </small>
+    </div>
+    
+    <!--Calls the JS after everything has been declared to avoid errors-->
+    <script src="popup.js"></script>
+</body>
+
+</html>

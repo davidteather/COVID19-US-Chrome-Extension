@@ -1,6 +1,6 @@
 {
     "name": "COVID-19 Tracker",
-    "version": "1.0",
+    "version": "1.0.0.0",
     "description": "A google chrome extension dedicated to tracking COVID-19 infections within the US.",
     "permissions": ["declarativeContent"],
     "page_action": {

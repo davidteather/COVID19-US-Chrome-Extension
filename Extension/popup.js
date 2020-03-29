@@ -2,14 +2,14 @@
 function updateRecovered() {
   $.ajax({
     // AJAX request for the total recovered in US
-    url: "http://covid19api.xapix.io/v2/locations?country_code=US",
+    url: "https://covid19.mathdro.id/api/countries/USA/recovered",
     context: document.body,
     success: function (result) {
       var recovered = 0;
 
       // Adds all locations to the variable recovered
-      for (x in result["locations"]) {
-        recovered += result["locations"][x]["latest"]["recovered"];
+      for (x in result) {
+        recovered += result[x]["recovered"];
       }
 
       // Sets recovered html
